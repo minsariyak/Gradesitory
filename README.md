@@ -5,7 +5,7 @@ This web application employs a subscription-based model providing users a reposi
 
 Visit [Gradesitory](https://www.gradesitory.com). _(This is the commercial version and you'll have to pay to use it. See below on how to access the unofficial version)_
 
-**Technologies Employed:** Python, Flask, Stripe API, SQL, SQLite, JavaScript, HTML & CSS.
+**Technologies Employed:** Python, Flask, Stripe API, SQL, SQLite, JavaScript, HTML, CSS, Adobe Photoshop, Adobe Premier Pro, Adobe Illustrator.
 
 ### Project Rationale
 - Master my front-end coding skills for web development using HTML, CSS, and JavaScript.
