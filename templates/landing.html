@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gradesitory | GPA Calculator</title>
+	<link rel="shortcut icon" type="image/png" href="../static/img/logo.png">
+	<link rel="stylesheet" href="../static/css/landing.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/e7ff852a3e.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-212594011-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-212594011-1');
+	</script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6762378038719459" crossorigin="anonymous"></script>
+</head>
+<body onload="hideNav()">
+	<div class="navbar">
+		<div class="logo">
+			<a href="/"><img src="../static/img/logo.png"></a>
+		</div>
+		<div class="navlinks">
+			<a href="/grading_systems">Grading Systems</a>
+			<a href="/contact">Contact</a>
+			<a href="/register" class="btn-sign-up">Sign Up</a>
+			<a href="/login" class="btn-sign-in">Sign In</a>
+		</div>
+	</div>
+	<div class="navbar-mb">
+		<div class="icon">
+			<a href="/"><img src="../static/img/logo.png"></a>
+		</div>
+		<div class="bars">
+			<i class="fas fa-bars" onclick="showNav()"></i>
+		</div>
+	</div>
+
+	<div class="catch">
+		<h1>The best way to track your <br> Grade Point Average</h1>
+		<p>Calculating your GPA has never been this easy. <br> Quickly add your course details to your account and let Gradesitory handle the rest.</p>
+	</div>
+
+	<div class="ui">
+		<img src="../static/img/ui.png">
+	</div>
+
+	<div class="pricing">
+		<a href="/register" class="btn-subscribe">Get Started</a>
+		<p>CAD $0.99 every 4 Months <br> (equivalent of a semester).</p>
+	</div>
+
+	<h2 style="text-align: center;">Why Gradesitory</h2>
+
+	<div class="flex-container">
+		<div class="flex-item text">
+			<h3>Quick. Convenient.</h3>
+			<p>Manually typing all your course grades each time you want to calculate your GPA can be time consuming and annoying. With Gradesitory, you can efficiently store all your courses centrally and simply login to your account to see your GPA.</p>
+		</div>
+		<div class="flex-item pic" style="padding: 2%;">
+			<!-- <img src="../static/img/quick.jpg" class="why-img"> -->
+			<video height="100%" width="100%" autoplay muted loop class="quick-vid"> 
+				<source src="../static/quick.mp4" type="video/mp4">
+			</video>
+		</div>
+	</div>
+
+	<div class="flex-container">
+		<div class="flex-item pic">
+			<img src="../static/img/stay_ahead.png" class="why-img">
+		</div>
+		<div class="flex-item text">
+			<h3>Stay one step ahead in your studies. </h3>
+			<p>Eliminate the gap between the release of grades and your GPA report. You no longer have to rely on your institution and wait for them to publish your GPA. Once your instructors announce your grades, plug them into your Gradesitory account and track your progress in real-time.</p>
+		</div>
+	</div>
+
+	<div class="flex-container">
+		<div class="flex-item text">
+			<h3>Save the environment.</h3>
+			<p>Become a part of an initiative to help counteract climate change. We contribute 0.5% of the subscription fee toward an initiative to permanently remove carbon dioxide from the atmosphere. Shine academically with one hand and save the world with the other.</p>
+			<a href="https://climate.stripe.com/yc1nqh" class="climate">Learn More</a>
+		</div>
+		<div class="flex-item pic">
+			<img src="../static/img/climate.jpg" class="climate-img">
+		</div>
+	</div>
+
+	<div class="flex-container-mb">
+		<div class="flex-item pic">
+			<!-- <img src="../static/img/quick.jpg" class="why-img"> -->
+			<video height="100%" width="100%" autoplay muted loop class="quick-vid"> 
+				<source src="../static/quick.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="flex-item text">
+			<h3>Quick. Convenient.</h3>
+			<p>Manually typing all your course grades each time you want to calculate your GPA can be time consuming and annoying. With Gradesitory, you can efficiently store all your courses centrally and simply login to your account to see your GPA.</p>
+		</div>
+	</div>
+
+	<div class="flex-container-mb">
+		<div class="flex-item pic">
+			<img src="../static/img/stay_ahead.png" class="why-img">
+		</div>
+		<div class="flex-item text">
+			<h3>Stay one step ahead in your studies. </h3>
+			<p>Eliminate the gap between the release of grades and your GPA report. You no longer have to rely on your institution and wait for them to publish your GPA. Once your instructors announce your grades, plug them into your Gradesitory account and track your progress in real-time.</p>
+		</div>
+	</div>
+
+	<div class="flex-container-mb">
+		<div class="flex-item pic">
+			<img src="../static/img/climate.jpg" class="climate-img">
+		</div>
+		<div class="flex-item text">
+			<h3>Save the environment.</h3>
+			<p>Become a part of an initiative to help counteract climate change. We contribute 0.5% of the subscription fee toward an initiative to permanently remove carbon dioxide from the atmosphere. Shine academically with one hand and save the world with the other.</p>
+			<a href="https://climate.stripe.com/yc1nqh" class="climate">Learn More</a>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p><i class="far fa-copyright"></i> 2021 Gradesitory. All rights reserved.<br> <a href="/terms_of_service">Terms of Service</a> | <a href="privacy_policy">Privacy Policy</a></p>
+	</div>
+
+	<div id="navlinks-mb">
+		<div class="cross">
+			<i class="fas fa-times" onclick="hideNav()"></i>
+		</div>
+		<div class="links">
+			<a href="/grading_systems">Grading Systems</a>
+			<a href="/contact">Contact</a>
+			<div class="bottom">
+				<a href="/register" style="border-radius: 10px; color: #002244 !important; font-weight: bold; border: 2px solid #002244; margin-bottom: 5%; margin-left: 5%; margin-right: 5%;">Sign Up</a>
+				<a href="/login" style="background-color: #002244; border-radius: 10px; color: white !important; font-weight: bold; border: none; margin-bottom: 5%; margin-left: 5%; margin-right: 5%;">Sign In</a>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function showNav() {
+			document.getElementById("navlinks-mb").style.display = "block";
+		}
+
+		function hideNav() {
+			document.getElementById("navlinks-mb").style.display = "none";
+		}
+	</script>
+
+</body>
+</html>

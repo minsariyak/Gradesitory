@@ -1,0 +1,1001 @@
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: grey;
+  opacity: 0.5;
+}
+
+select {
+	background-color: white;
+	color: black;
+}
+
+option {
+	color: black;
+}
+
+/*CSS for tablets*/
+@media only screen and (max-width: 1024px) {
+
+	/*HOME PAGE CSS*/
+	body {
+		margin-bottom: 5%;
+		height: 100%;
+		background-color: #F0F8FF;
+	}
+
+	#main-div {
+		margin: 0;
+		padding: 0;
+	}
+
+	.add-course-btn {
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 75px;
+		height: 75px;
+		margin: 25px;
+		border-radius: 50%;
+		background-color: #002244;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		font-size: 30px;
+		color: white;
+	}     
+
+	#sidenav {
+		display: none;
+	}
+
+	/* Style the side navigation */
+	#sidenav-mobile {
+	  	height: 100%;
+		width: 100%;
+		position: fixed;
+	  	top: 50%;
+	  	left: 50%;
+	  	transform: translate(-50%,-50%);
+		background-color: #002244;
+		overflow-x: hidden;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		display: none;
+		z-index: 2;
+		opacity: 0.99;
+	}
+
+	.cross-mobile {
+		position: fixed;
+		left: 0;
+		right: 0;
+		margin: 5%;
+		cursor: pointer;
+		color: white;
+		font-size: 150%;
+	}
+
+	/* Side navigation links */
+	#sidenav-mobile a {
+		color: #fffafa;
+		font-weight: bold;
+		text-decoration: none;
+		display: block;
+		text-align: center;
+	}
+
+	#sidenav-mobile .upper, #sidenav-mobile .bItem {
+		padding: 1%;
+	}
+
+	#sidenav-mobile .bottom {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		padding: 10px;
+		margin: 0px;
+	}
+
+	#sidenav-mobile .brand {
+		text-align: center;
+		color: #fffafa;
+		margin-bottom: 5%;
+	}
+
+	#logo-white {
+		width: 30%;
+		padding-top: 5%;
+	}
+
+	#topnav {
+		position: fixed;
+		top: 0;
+		background-color: #7CB9E8;
+		width: 100%;
+		height: 5%;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		display: flex;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	.user {
+		color: white;
+		margin: 0;
+		padding: 0;
+		flex-grow: 8;
+		text-align: right;
+		padding-right: 2%;
+		font-size: 130%;
+	}
+
+	#bars {
+		color: white;
+		cursor: pointer;
+		display: block;
+		margin: 0;
+		padding: 0;
+		flex-grow: 1;
+		padding-left: 4%;
+		font-size: 130%;
+	}
+
+	.fa-search-desktop {
+		display: none;
+	}
+
+	.search-bar {
+		background-color: transparent;
+		color: white;
+		margin: 0;
+		padding: 0;
+		flex-grow: 1;
+		font-size: 130%;
+	}
+
+	.search-bar input {
+		display: none;
+	}
+
+	.search-bar-active {
+		background-color: white;
+		color: black; 
+		margin: 0;
+		font-size: 130%;
+		display: flex;
+		align-items: center;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 20px;
+	}
+
+	.search-bar-active input {
+		display: block;
+	}
+
+	/*every other input has a border on focus except for the search input*/
+	.search-bar-active input, .search-bar-active input:focus {
+		border: none;
+	}
+
+	.search-bar-active input[type="text"] {
+		text-align: left;
+	}
+
+	.verificationPrompt {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 15%;
+	}
+
+	.verificationPrompt a {
+		color: #16A085;
+	}
+
+	.fa-info-circle {
+		color: #16A085;
+		font-size: 20px;
+	}
+
+	.gpa-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin-top: 10%;
+	}
+
+	.gpa-container p {
+		font-size: 30px;
+		font-family: 'Fredoka One', cursive;
+		font-weight: bold;
+		padding-top: 15%;
+		margin-bottom: 15%;
+	}
+
+	.gpa-container h6 {
+		font-size: 15px;
+	}
+
+	.cgpa-item, .mgpa-item, .nmgpa-item {
+		width: 50%;
+		height: 50%;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		border-radius: 15%;
+		text-align: center;
+		margin: 5%;
+		padding: 0; 	
+	}
+
+	.cgpa-item {
+		background-color: white;
+	}
+
+	.mgpa-item {
+		background-color: white;
+	}
+
+	.nmgpa-item {
+		background-color: white;
+	}
+
+	#display-all-courses, #display-major-courses, #display-non-major-courses {
+		padding-top: 5%;
+		font-size: 150%;
+	}
+
+	#display-all-courses button, #display-major-courses button, #display-non-major-courses button {
+		border: none;
+		background: none;
+		color: black !important;
+	}
+
+	.title {
+		text-align: center;
+	}
+
+	.feedback {
+		width: max-content;
+		margin: auto;
+	}
+
+	table {
+		margin: auto;
+		height: auto;
+		width: 80%;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		text-align: center;
+		padding: 20px;
+		background-color: white;
+		font-size: 70%;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	td {
+		padding: 10px;
+	}
+
+	th {
+		padding: 15px;
+	}
+
+	.td-hover:hover {
+		background-color: #F0F8FF;
+	}
+
+	/* ADD/EDIT COURSE CSS */
+
+	#add-course, #edit-course {
+		display: none;
+	  	position: fixed;
+	  	top: 50%;
+	  	left: 50%;
+	  	transform: translate(-50%,-50%);
+	  	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	  	border: none;
+	  	border-radius: 5%;
+	  	width: max-content;
+	  	padding: 50px;
+	  	z-index: 2;
+	  	background-color: white;
+	  	font-size: 120%;
+	}
+
+	#add-course form, #edit-course form, #verify-email form {
+		text-align: center;
+	}
+
+	/*Increase spacing between form elements*/
+	#add-course form > *, #edit-course form > * {
+		margin: 2%;
+	}
+
+	#add-course .row, #edit-course .row {
+		padding: 10px;
+		margin: 0px;
+	}
+
+	#add-course .row .col-md-6, #edit-course .row .col-md-6 {
+		text-align: center;
+	}
+
+	input[type="text"]::placeholder, input[type="text"] {
+		text-align: center;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input, select {
+		border-radius: 7px;
+		border: 1px solid #002244;
+	}
+
+	input:focus, select:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	.btn-add, .btn-edit {
+		background-color: #002244;
+		border-radius: 10px;
+		width: 50%;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+}
+
+/*CSS for mobile phones*/
+@media only screen and (max-width: 480px) {
+
+	/*HOME PAGE CSS*/
+	body {
+		margin-bottom: 22%;
+		height: 100%;
+		background-color: #F0F8FF;
+	}
+
+	#main-div {
+		margin: 0;
+		padding: 0;
+	}
+
+	.add-course-btn {
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 75px;
+		height: 75px;
+		margin: 25px;
+		border-radius: 50%;
+		background-color: #002244;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		font-size: 30px;
+		color: white;
+	}
+
+	#sidenav {
+		display: none;
+	}
+
+	/* Style the side navigation */
+	#sidenav-mobile {
+	  	height: 100%;
+		width: 100%;
+		position: fixed;
+	  	top: 50%;
+	  	left: 50%;
+	  	transform: translate(-50%,-50%);
+		background-color: #002244;
+		overflow-x: hidden;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		display: none;
+		z-index: 2;
+		opacity: 0.99;
+	}
+
+	.cross-mobile {
+		position: fixed;
+		left: 0;
+		right: 0;
+		margin: 5%;
+		color: white;
+		font-size: 110%;
+	}
+
+	/* Side navigation links */
+	#sidenav-mobile a {
+		color: #fffafa;
+		font-weight: bold;
+		text-decoration: none;
+		display: block;
+		text-align: center;
+	}
+
+	#sidenav-mobile .upper, #sidenav-mobile .bItem {
+		padding: 1%;
+	}
+
+	#sidenav-mobile .bottom {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		padding: 10px;
+		margin: 0px;
+	}
+
+	#sidenav-mobile .brand {
+		text-align: center;
+		color: #fffafa;
+		margin-bottom: 5%;
+	}
+
+	#logo-white {
+		width: 50%;
+		padding-top: 5%;
+	}
+
+	#topnav {
+		position: fixed;
+		top: 0;
+		background-color: #7CB9E8;
+		width: 100%;
+		height: 5%;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		display: flex;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	.user {
+		color: white;
+		margin: 0;
+		padding: 0;
+		flex-grow: 8;
+		text-align: right;
+		padding-right: 2%;
+		font-size: 90%;
+	}
+
+	#bars {
+		color: white;
+		display: block;
+		margin: 0;
+		padding: 0;
+		flex-grow: 1;
+		padding-left: 4%;
+		font-size: 110%;
+	}
+
+	.fa-search-desktop {
+		display: none;
+	}
+
+	.search-bar {
+		background-color: transparent;
+		color: white;
+		margin: 0;
+		padding: 0;
+		flex-grow: 1;
+		font-size: 90%;
+	}
+
+	.search-bar input {
+		display: none;
+	}
+
+	.search-bar-active {
+		background-color: white;
+		color: black; 
+		margin: 0;
+		font-size: 90%;
+		display: flex;
+		align-items: center;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: 20px;
+	}
+
+	.search-bar-active input {
+		display: block;
+	}
+
+	/*every other input has a border on focus except for the search input*/
+	.search-bar-active input, .search-bar-active input:focus {
+		border: none;
+	}
+
+	.search-bar-active input[type="text"] {
+		text-align: left;
+	}
+
+	.verificationPrompt {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 15%;
+		text-align: center;
+	}
+
+	.verificationPrompt a {
+		color: #16A085;
+	}
+
+	.fa-info-circle {
+		color: #16A085;
+		font-size: 20px;
+	}
+
+	.gpa-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin-top: 10%;
+	}
+
+	.gpa-container p {
+		font-size: 20px;
+		font-family: 'Fredoka One', cursive;
+		font-weight: bold;
+		padding-top: 15%;
+		margin-bottom: 15%;
+	}
+
+	.gpa-container h6 {
+		font-size: 10px;
+	}
+
+	.cgpa-item, .mgpa-item, .nmgpa-item {
+		width: 50%;
+		height: 50%;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		border-radius: 15%;
+		text-align: center;
+		margin: 5%;
+		padding: 0; 	
+	}
+
+	.cgpa-item {
+		background-color: white;
+	}
+
+	.mgpa-item {
+		background-color: white;
+	}
+
+	.nmgpa-item {
+		background-color: white;
+	}
+
+	#display-all-courses, #display-major-courses, #display-non-major-courses {
+		padding-top: 5%;
+	}
+
+	#display-all-courses button, #display-major-courses button, #display-non-major-courses button {
+		border: none;
+		background: none;
+		color: black !important;
+	}
+
+	.title {
+		text-align: center;
+	}
+
+	.feedback {
+		width: max-content;
+		margin: auto;
+	}
+
+	table {
+		margin: auto;
+		height: auto;
+		width: 80%
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		text-align: center;
+		padding: 20px;
+		background-color: white;
+		font-size: 50%;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	td {
+		padding: 10px;
+	}
+
+	th {
+		padding: 15px;
+	}
+
+	.td-hover:hover {
+		background-color: #F0F8FF;
+	}
+
+	/* ADD/EDIT COURSE CSS */
+
+	#add-course, #edit-course {
+		display: none;
+	  	position: fixed;
+	  	top: 50%;
+	  	left: 50%;
+	  	transform: translate(-50%,-50%);
+	  	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	  	border: none;
+	  	border-radius: 5%;
+	  	width: 90%;
+	  	padding: 5px;
+	  	z-index: 2;
+	  	background-color: white;
+	  	font-size: 120%;
+	}
+
+	#add-course form, #edit-course form, #verify-email form {
+		text-align: center;
+	}
+
+	/*Increase spacing between form elements*/
+	#add-course form > *, #edit-course form > * {
+		margin: 2%;
+	}
+
+	#add-course .row, #edit-course .row {
+		padding: 10px;
+		margin: 0px;
+	}
+
+	#add-course .row .col-md-6, #edit-course .row .col-md-6 {
+		text-align: center;
+	}
+
+	input[type="text"]::placeholder, input[type="text"] {
+		text-align: center;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input, select {
+		border-radius: 7px;
+		border: 1px solid #002244;
+	}
+
+	input:focus, select:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	.btn-add, .btn-edit {
+		background-color: #002244;
+		border-radius: 10px;
+		width: 50%;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+}
+
+/*CSS for laptops/desktops*/
+@media only screen and (min-width: 1025px) {
+
+	/*HOME PAGE CSS*/
+	body {
+		margin-bottom: 50px;
+		height: 100%;
+		background-color: #F0F8FF;
+	}
+
+	#main-div {
+		margin-left: 200px;
+	}
+
+	.add-course-btn {
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 75px;
+		height: 75px;
+		margin: 25px;
+		border-radius: 50%;
+		background-color: #002244;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		font-size: 30px;
+		color: white;
+	}    
+
+	.add-course-btn:hover {
+		color: #7CB9E8;
+		background-color: white;
+		background-image: none;
+	}
+
+	/* Style the side navigation */
+
+	#sidenav-mobile {
+		display: none;
+	}
+
+	#sidenav {
+	  	height: 100%;
+		width: 200px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		/*background-image: linear-gradient(to bottom right, #02AAB0, #00CDAC);*/
+		background-color: #002244;
+		overflow-x: hidden;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	}
+
+	/* Side navigation links */
+	#sidenav a {
+		color: #fffafa;
+		font-weight: bold;
+		text-decoration: none;
+		display: block;
+	}
+
+	/* Change color on hover */
+	#sidenav .upper:hover, #sidenav .bItem:hover {
+	  background-color: #7CB9E8;
+	  /*background-color: #F0F8FF;
+	  border-top-left-radius: 30px;
+	  border-bottom-left-radius: 30px;*/
+	}
+
+	#sidenav .upper, #sidenav .bItem {
+		padding: 10px;
+	}
+
+	#sidenav .bottom {
+		position: fixed;
+		bottom: 0;
+		width: 200px;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	#sidenav .brand {
+		text-align: center;
+		color: #fffafa;
+		margin-bottom: 5%;
+	}
+
+	#logo-white {
+		width: 90%;
+		padding-top: 5%;
+	}
+
+	#topnav {
+		background-color: #7CB9E8;
+		position: fixed;
+		top: 0;
+		/*background: #f12711;
+		background: -webkit-linear-gradient(to right, #f5af19, #f12711);  
+		background: linear-gradient(to right, #f5af19, #f12711);*/
+		width: 100%;
+		height: 50px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		display: flex;
+		align-items: center;
+		padding-left: 30px;
+		padding-right: 230px; /*add 200 to desired padding due to sidenav being 200px*/
+	}
+
+	.user {
+		color: white;
+		font-size: 18px;
+		margin-left: auto;
+	}
+
+	#bars {
+		display: none;
+	}
+
+	.fa-search-mobile {
+		display: none;
+	}
+
+	.search-bar {
+		background-color: white;
+		border-radius: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	/*every other input has a border on focus except for the search input*/
+	.search-bar input, .search-bar input:focus {
+		border: none;
+	}
+
+	.search-bar input[type="text"] {
+		text-align: left;
+	}
+
+	.verificationPrompt {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 60px;
+		text-align: center;
+	}
+
+	.verificationPrompt a {
+		color: #16A085;
+	}
+
+	.fa-info-circle {
+		color: #16A085;
+		font-size: 20px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.gpa-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-top: 60px;
+	}
+
+	.gpa-container p {
+		font-size: 45px;
+		font-family: 'Fredoka One', cursive;
+		font-weight: bold;
+	}
+
+	.cgpa-item, .mgpa-item, .nmgpa-item {
+		width: 350px;
+		height: 150px;
+		padding: 25px;
+		margin: 25px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		border-radius: 15px;
+		text-align: center;
+	}
+
+	.cgpa-item {
+		background-color: white;
+	}
+
+	.mgpa-item {
+		background-color: white;
+	}
+
+	.nmgpa-item {
+		background-color: white;
+
+	}
+
+	#display-all-courses, #display-major-courses, #display-non-major-courses {
+		padding-top: 30px;
+	}
+
+	#display-all-courses button, #display-major-courses button, #display-non-major-courses button {
+		border: none;
+		background: none;
+		color: black !important;
+	}
+
+	.title {
+		text-align: center;
+	}
+
+	.feedback {
+		width: max-content;
+		margin: auto;
+	}
+
+	table {
+		margin: auto;
+		height: auto;
+		width: 50%;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		text-align: center;
+		padding: 20px;
+		background-color: white;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	td {
+		padding: 10px;
+	}
+
+	th {
+		padding: 15px;
+	}
+
+	.td-hover:hover {
+		background-color: #F0F8FF;
+	}
+
+	/* ADD/EDIT COURSE CSS */
+
+	#add-course, #edit-course {
+		display: none;
+	  	position: fixed;
+	  	top: 50%;
+	  	left: 50%;
+	  	transform: translate(-50%,-50%);
+	  	border: none;
+	  	border-radius: 5%;
+	  	width: max-content;
+	  	padding: 20px;
+	  	z-index: 2;
+	  	background-color: white;
+	}
+
+	#add-course form, #edit-course form, #verify-email form {
+		text-align: center;
+	}
+
+	/*Increase spacing between form elements*/
+	#add-course form > *, #edit-course form > * {
+		margin: 1%;
+	}
+
+	#add-course .row, #edit-course .row {
+		padding: 7px;
+		margin: 0px;
+	}
+
+	#add-course .row .col-md-6, #edit-course .row .col-md-6 {
+		text-align: left;
+	}
+
+	input[type="text"]::placeholder, input[type="text"] {
+		text-align: center;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input, select {
+		border-radius: 7px;
+		border: 1px solid #002244;
+	}
+
+	input:focus, select:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	.btn-add, .btn-edit {
+		background-color: #002244;
+		border-radius: 10px;
+		width: 50%;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+}
+

@@ -1,0 +1,542 @@
+.climate {
+    color: #002244;
+}
+
+.quick-vid {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: #002244;
+		font-size: 2em;
+	}
+
+	.links {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	.bottom {
+		position: fixed;
+		bottom: 0;
+		width: 90%;
+	}
+
+	.links a {
+		display: block;
+		color: black;
+		text-decoration: none;
+		margin-bottom: 5%;
+		width: 100%;
+		padding-top: 1%;
+		padding-bottom: 1%;
+	}
+
+	.cross {
+		text-align: right;
+		margin-right: 5%;
+		margin-top: 5%;
+	}
+
+	.navbar-mb {
+		display: flex;
+		align-items: center;
+	}
+
+	#navlinks-mb {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		margin: 0;
+		padding: 0;
+		z-index: 1;
+	}
+
+	.navbar {
+		display: none;
+	}
+
+	.icon {
+		flex: 50%;
+		text-align: left;
+	}
+
+	.bars {
+		flex: 50%;
+		text-align: right;
+		margin-right: 5%;
+	}
+
+	.icon img {
+		height: 90px;
+		width: 95px;
+		padding: 5%;
+	}
+
+	.btn-sign-up {
+		border-radius: 10px;
+		color: #002244 !important;
+		font-weight: bold;
+		border: 2px solid #002244;
+	}
+
+	.btn-sign-in {
+		background-color: #002244;
+		border-radius: 10px;
+		color: white !important;
+		font-weight: bold;
+		border: none;
+	}
+
+	.catch {
+		text-align: center;
+		margin-bottom: 12%;
+	}
+
+	.catch h1 {
+		font-size: 2em;
+		padding-right: 5%;
+		padding-left: 5%;
+	}
+
+	.catch p {
+		font-size: 80%;
+		margin-bottom: 10%;
+		padding-left: 15%;
+		padding-right: 15%;
+		line-height: 1.5;
+	}
+
+	.catch br {
+		display: none;
+	}
+
+	.btn-subscribe {
+		text-decoration: none;
+		border-radius: 10px;
+		width: 50%;
+		color: #002244;
+		font-weight: bold;
+		border: 2px solid #002244;
+		padding-right: 5%;
+		padding-left: 5%;
+		padding-top: 1%;
+		padding-bottom: 1%;
+	}
+
+	.ui {
+		text-align: center;
+		margin-bottom: 12%;
+	}
+
+	.ui img {
+		height:80%;
+		width:80%;
+	}
+
+	.pricing {
+		text-align: center;
+		margin-bottom: 10%;
+		font-size: 80%;
+	}
+
+	.flex-container {
+		display: none;
+	}
+
+	.flex-container-mb {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.flex-container-mb .flex-item {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.why-img {
+		height: 50%;
+		width: 100%;
+		border-radius: 10px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	}
+
+	.climate-img {
+	    width: 100%;
+	}
+
+	.pic {
+		text-align: center;
+	}
+
+	.text {
+		padding: 5%;
+		text-align: center;
+		font-size: 80%;
+	}
+
+	.footer p {
+		text-align: center;
+		font-weight: bold;
+		font-size: 60%;
+	}
+
+	.footer a {
+		text-decoration: underline;
+		color: black;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: #002244;
+		font-size: 1em;
+	}
+
+	.links {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	.bottom {
+		position: fixed;
+		bottom: 0;
+		width: 90%;
+	}
+
+	.links a {
+		display: block;
+		color: black;
+		text-decoration: none;
+		margin-bottom: 5%;
+		width: 100%;
+		padding-top: 1%;
+		padding-bottom: 1%;
+	}
+
+	.cross {
+		text-align: right;
+		margin-right: 5%;
+		margin-top: 5%;
+	}
+
+	.navbar-mb {
+		display: flex;
+		align-items: center;
+	}
+
+	#navlinks-mb {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		margin: 0;
+		padding: 0;
+		z-index: 1;
+	}
+
+	.navbar {
+		display: none;
+	}
+
+	.icon {
+		flex: 50%;
+		text-align: left;
+	}
+
+	.bars {
+		flex: 50%;
+		text-align: right;
+		margin-right: 5%;
+	}
+
+	.icon img {
+		height: 45px;
+		width: 50px;
+		padding: 7%;
+	}
+
+	.btn-sign-up {
+		border-radius: 10px;
+		color: #002244 !important;
+		font-weight: bold;
+		border: 2px solid #002244;
+	}
+
+	.btn-sign-in {
+		background-color: #002244;
+		border-radius: 10px;
+		color: white !important;
+		font-weight: bold;
+		border: none;
+	}
+
+	.catch {
+		text-align: center;
+		margin-bottom: 12%;
+	}
+
+	.catch h1 {
+		font-size: 2em;
+	}
+
+	.catch p {
+		font-size: 80%;
+		margin-bottom: 10%;
+		padding-left: 15%;
+		padding-right: 15%;
+		line-height: 1.5;
+	}
+
+	.catch br {
+		display: none;
+	}
+
+	.btn-subscribe {
+		text-decoration: none;
+		border-radius: 10px;
+		width: 50%;
+		color: #002244;
+		font-weight: bold;
+		border: 2px solid #002244;
+		padding-right: 5%;
+		padding-left: 5%;
+		padding-top: 1%;
+		padding-bottom: 1%;
+	}
+
+	.ui {
+		text-align: center;
+		margin-bottom: 12%;
+	}
+
+	.ui img {
+		height:80%;
+		width:80%;
+	}
+
+	.pricing {
+		text-align: center;
+		margin-bottom: 15%;
+		font-size: 80%;
+	}
+
+	.flex-container {
+		display: none;
+	}
+
+	.flex-container-mb {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.flex-container-mb .flex-item {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.why-img {
+		height: 50%;
+		width: 100%;
+		border-radius: 10px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	}
+
+	.climate-img {
+	    width: 100%;
+	}
+
+	.pic {
+		text-align: center;
+	}
+
+	.text {
+		padding: 5%;
+		text-align: center;
+		font-size: 80%;
+	}
+
+	.footer p {
+		text-align: center;
+		font-weight: bold;
+		font-size: 60%;
+	}
+
+	.footer a {
+		text-decoration: underline;
+		color: black;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: #002244;
+	}
+
+	.navlinks a {
+		display: inline;
+		color: black;
+		text-decoration: none;
+		padding: 1%;
+		margin-right: 5%;
+	}
+
+	.navlinks a:hover {
+		text-decoration: underline;
+	}
+
+	.navbar {
+		display: flex;
+		height: 20%;
+		align-items: center;
+		font-size: 1.2em;
+	}
+
+	.navbar-mb, #navlinks-mb {
+		display: none;
+	}
+
+	.logo {
+		flex: 50%;
+	}
+
+	.logo img {
+		height: 120px;
+		width: 120px;
+		padding: 2%;
+	}
+
+	.navlinks {
+		flex: 50%;
+		text-align: right;
+	}
+
+	.btn-sign-up {
+		border-radius: 10px;
+		width: 50%;
+		color: #002244 !important;
+		font-weight: bold;
+		border: 2px solid #002244;
+	}
+
+	.btn-sign-in {
+		background-color: #002244;
+		border-radius: 10px;
+		width: 50%;
+		color: white !important;
+		font-weight: bold;
+		border: none;
+	}
+
+	.btn-sign-up:hover, .btn-sign-in:hover {
+		text-decoration: none !important;
+	}
+
+	.catch {
+		text-align: center;
+		margin-bottom: 5%;
+	}
+
+	.catch h1 {
+		font-size: 4em;
+	}
+
+	.catch p {
+		font-size: 18px;
+		margin-bottom: 4%;
+		line-height: 1.5;
+	}
+
+	.btn-subscribe {
+		text-decoration: none;
+		border-radius: 10px;
+		color: #002244;
+		font-weight: bold;
+		border: 2px solid #002244;
+		padding-right: 3%;
+		padding-left: 3%;
+		padding-top: 0.5%;
+		padding-bottom: 0.5%;
+	}
+
+	.ui {
+		text-align: center;
+		margin-bottom: 5%;
+	}
+
+	.ui img {
+		height:70%;
+		width:70%;
+	}
+
+	.pricing {
+		text-align: center;
+		margin-bottom: 10%;
+		font-size: 18px;
+	}
+
+	.flex-container-mb {
+		display: none;
+	}
+
+	.flex-container {
+		display: flex;
+		align-items: center;
+	}
+
+	.flex-item {
+		flex: 50%;
+	}
+
+	.why-img {
+		height: 350px;
+		width: 550px;
+		border-radius: 10px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	}
+
+	.climate-img {
+	    width: 550px;
+	}
+
+	.pic {
+		text-align: center;
+	}
+
+	.text {
+		padding: 5%;
+	}
+
+	.footer p {
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.footer a {
+		text-decoration: underline;
+		color: black;
+	}
+
+	.footer br {
+		display: none;
+	}
+}
+
+
+

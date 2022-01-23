@@ -1,0 +1,394 @@
+body {
+	background-color: #F0F8FF;
+	text-align: center;
+}
+
+select {
+	background-color: white;
+	color: black;
+}
+
+option {
+	color: black;
+}
+
+/*CSS for tablets*/
+@media only screen and (max-width: 1024px) {
+	#logo {
+		width: 30%;
+		text-align: center;
+		padding-top: 5%;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	.register-form {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 15px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		border-radius: 10px;
+		width: 55%;
+		background-color: white;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		border-radius: 7px;
+		border: 1px solid #002244;
+		width: 100%;
+	}
+
+	input, select {
+		border-radius: 7px;
+		border: 1px solid #002244;
+		width: 100%;
+	}
+
+	input:focus, select:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	input::placeholder {
+	    text-align: center;
+	}
+
+	input[type="text"], input[type="password"], input[type="email"] {
+	  text-align: center;
+	}
+
+	select {
+		text-align-last: center;
+	}
+
+	.login-button {
+		padding-top: 50px;
+	}
+
+	.message {
+		width: 90%;
+		margin: auto;
+	}
+
+	#payment {
+		display: none;
+	}
+
+	#profile-button, #payment-button {
+		border: none;
+		background-color: white;
+		outline: none;
+		color: black !important;
+	}
+
+	.pagination {
+		margin: 0;
+		padding: 0;
+	}
+
+	.pagination-content {
+		padding: 1%;
+	}
+
+	.active-button {
+		text-decoration-line: underline;
+		text-decoration-color: #002244;
+	}
+
+	.row {
+		padding: 1%;
+	}
+
+	.btn-div {
+		padding-top: 3%;
+	}
+
+	.login-btn {
+		text-decoration-line: underline;
+		text-decoration-color: #002244;
+	}
+
+	.btn-continue, .btn-register {
+		background-color: #002244;
+		border-radius: 10px;
+		width: 50%;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+
+	.btn-back {
+		background-color: #E31837;
+		border-radius: 10px;
+		width: 50%;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+}
+
+/*CSS for mobile phones*/
+@media only screen and (max-width: 480px) {
+	#logo {
+		width: 50%;
+		text-align: center;
+		padding-top: 5%;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	.register-form {
+
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 15px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		border-radius: 10px;
+		width: 85%;
+		height: 75%;
+		background-color: white;
+		overflow: auto;
+		margin-top: 5%;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		border-radius: 7px;
+		border: 1px solid #002244;
+		width: 100%;
+	}
+
+	input, select {
+		border-radius: 7px;
+		border: 1px solid #002244;
+		width: 100%;
+	}
+
+	input:focus, select:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	input::placeholder {
+	    text-align: center;
+	}
+
+	input[type="text"], input[type="password"], input[type="email"] {
+	  text-align: center;
+	}
+
+	select {
+		text-align-last: center;
+	}
+
+	.login-button {
+		padding-top: 50px;
+	}
+
+	.message {
+		width: 90%;
+		margin: auto;
+	}
+
+	#payment {
+		display: none;
+	}
+
+	#profile-button, #payment-button {
+		border: none;
+		background-color: white;
+		outline: none;
+		color: black !important;
+	}
+
+	.pagination {
+		margin: 0;
+		padding: 0;
+	}
+
+	.pagination-content {
+		padding: 5%;
+	}
+
+	.active-button {
+		text-decoration-line: underline;
+		text-decoration-color: #002244;
+	}
+
+	.row {
+		padding: 1%;
+	}
+
+	.btn-div {
+		padding-top: 3%;
+	}
+
+	.login-btn {
+		text-decoration-line: underline;
+		text-decoration-color: #002244;
+	}
+
+	.btn-continue, .btn-register {
+		background-color: #002244;
+		border-radius: 10px;
+		width: 50%;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+
+	.btn-back {
+		background-color: #E31837;
+		border-radius: 10px;
+		width: 50%;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+}
+
+/*CSS for laptops/desktops*/
+@media only screen and (min-width: 1025px) {
+
+	#logo {
+		width: 20%;
+		text-align: center;
+		padding-top: 2%;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	.register-form {
+
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -40%);
+		padding: 15px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		border-radius: 10px;
+		width: 30%;
+		background-color: white;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input, select {
+		border-radius: 7px;
+		border: 1px solid #002244;
+		width: 100%;
+	}
+
+	input:focus, select:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	input::placeholder {
+	    text-align: center;
+	}
+
+	input[type="text"], input[type="password"], input[type="email"] {
+	  text-align: center;
+	}
+
+	select {
+		text-align-last: center;
+	}
+
+	.login-button {
+		padding-top: 50px;
+	}
+
+	.message {
+		width: 90%;
+		margin: auto;
+	}
+
+	#payment {
+		display: none;
+	}
+
+	#profile-button, #payment-button {
+		border: none;
+		background-color: white;
+		outline: none;
+		color: black;
+	}
+
+	.pagination {
+		margin: 0;
+		padding: 0;
+	}
+
+	.pagination-content {
+		padding: 1%;
+	}
+
+	/*#profile-button {
+		text-decoration-line: underline;
+		text-decoration-color: green;
+	}*/
+
+	.active-button {
+		text-decoration-line: underline;
+		text-decoration-color: #002244;
+	}
+
+	.row {
+		padding: 1%;
+	}
+
+	.btn:hover {
+		border: 1px solid #002244;
+	}
+
+	.btn-continue, .btn-register {
+		background-color: #002244;
+		border-radius: 10px;
+		width: 60%;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+
+	.btn-back {
+		background-color: #E31837;
+		border-radius: 10px;
+		width: 50%;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+}

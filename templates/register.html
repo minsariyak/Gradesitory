@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gradesitory | Create Account</title>
+	<link rel="shortcut icon" type="image/png" href="../static/img/logo.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../static/css/register.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../static/js/register.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-212594011-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-212594011-1');
+	</script>
+</head>
+
+<!-- If route is card_error (card validation fails during payment) then profile section is hidden -->
+{% if route: %}
+<body onload="show_payment()">
+{% else: %}
+<body onload="show_profile()">
+{% endif %}
+
+	<img id="logo" src="../static/img/logo_blue.png" onclick="location.href = '/';">
+
+	<div class="register-form">
+		<h1>Create a new account</h1>
+		<div class="pagination row">
+			<div class="col-6 pagination-content">
+				<button id="profile-button" type="button">Profile</button>
+			</div>
+			<div class="col-6 pagination-content">
+				<button id="payment-button" type="button">Payment</button>
+			</div>
+		</div>
+
+		<!-- server data validation errors are displayed here -->
+		{% if message: %}
+		<div id="error-display-server" class="message alert alert-danger">
+			<p>{{ message }}</p>
+		</div>
+		{% endif %}
+
+		<!-- client data validation errors are displayed here -->
+		<div id="error-display" class="message alert alert-danger" style="display: none;"></div>
+
+		<form id="register" name="registration-form" autocomplete="off">
+			<div id="profile">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<label>Name</label>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<input type="text" name="name" placeholder="Enter Full Name" required>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<label>Email</label>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<input type="email" name="email" placeholder="Enter Email Address" required>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<Label>Username</Label>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<input name="username" type="text" placeholder="Enter Username" required>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<label>Password</label>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<input name="password" type="password" placeholder="Enter Password" required>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<label>Confirm Password</label>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						 <input name="confirmation" type="password" placeholder="Confirm Password" required>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<label>GPA Scale</label>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						 <select name="gpa_scale">
+        					<option value="4">4 point</option>
+        					<option value="9">9 point</option>
+        				</select>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12 col-sm-12 btn-div">
+						<button type="button" onclick="validate('profile')" class="btn-continue">Continue</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="payment">
+				<div class="row">
+					<div class="col-md-6 col-sm-12" >
+						<label>Card Number</label>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<input type="text" name="number" placeholder="Card Number" maxlength="16" size="16" required onkeyup="move(this, 'MM')">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<label>Expiry Month</label>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<input type="text" name="exp_month" placeholder="MM" maxlength="2" size="2" required id="MM" onkeyup="move(this, 'YY')">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<label>Expiry Year</label>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<input type="text" name="exp_year" placeholder="YY" maxlength="2" size="2" required id="YY" onkeyup="move(this, 'CVC')">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<label>CVC</label>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<input type="text" name="cvc" placeholder="CVC" maxlength="3" size="3" required id="CVC"> <br><br>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-sm-6 btn-div">
+						<button class="btn-back" type="button" onclick="show_profile()">Back</button>
+					</div>
+					<div class="col-md-6 col-sm-6 btn-div">
+						<button id="registration-btn" class="btn-register" type="button" onclick="validate('payment')">Pay $0.99</button>
+					</div>
+				</div>
+			</div>
+    	</form>
+
+    	<form id="login" action="/login" class="login-button">
+    		<button class="btn login-btn">Have an account? Login</button>
+    	</form>
+	</div>
+
+	<!-- When an error occurs, the forms are cleared on reload. The code below re-fills the forms with previous data input -->
+	<script type="text/javascript">
+		document.getElementsByName("name")[0].value = "{{ name }}";
+		document.getElementsByName("email")[0].value = "{{ email }}";
+		document.getElementsByName("username")[0].value = "{{ username }}";
+		document.getElementsByName("password")[0].value = "{{ password }}";
+		document.getElementsByName("confirmation")[0].value = "{{ password }}";
+		document.getElementsByName("number")[0].value = "{{ number }}";
+		document.getElementsByName("exp_month")[0].value = "{{ exp_month }}";
+		document.getElementsByName("exp_year")[0].value = "{{ exp_year }}";
+		document.getElementsByName("cvc")[0].value = "{{ cvc }}";
+	</script>
+
+</body>
+</html>

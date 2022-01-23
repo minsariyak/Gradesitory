@@ -1,0 +1,161 @@
+/*CSS for tablets*/
+@media only screen and (max-width: 1024px) {
+	body {
+		text-align: center;
+		background-color: #F0F8FF;
+	}
+
+	#verify-email {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 15px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		border-radius: 10px;
+		width: 30%;
+		background-color: white;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		border-radius: 7px;
+		border: 1px solid #002244;
+		width: 75%;
+	}
+
+	input::placeholder {
+	    text-align: center;
+	}
+
+	input:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	.btn {
+		text-decoration: underline;
+	}
+
+	.btn-verify {
+		background-color: #002244;
+		border-radius: 10px;
+		width: 50%;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+}
+
+/*CSS for mobile phones*/
+@media only screen and (max-width: 480px) {
+	body {
+		text-align: center;
+		background-color: #F0F8FF;
+	}
+
+	#verify-email {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 15px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		border-radius: 10px;
+		width: 90%;
+		background-color: white;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		border-radius: 7px;
+		border: 1px solid #002244;
+		width: 75%;
+	}
+
+	input::placeholder {
+	    text-align: center;
+	}
+
+	input:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	.btn {
+		text-decoration: underline;
+	}
+
+	.btn-verify {
+		background-color: #002244;
+		border-radius: 10px;
+		width: 50%;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+}
+
+/*CSS for laptops/desktops*/
+@media only screen and (min-width: 1025px) {
+	body {
+		text-align: center;
+		background-color: #F0F8FF;
+	}
+
+	#verify-email {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 15px;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		border-radius: 10px;
+		width: 30%;
+		background-color: white;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		border-radius: 7px;
+		border: 1px solid #002244;
+		width: 75%;
+	}
+
+	input::placeholder {
+	    text-align: center;
+	}
+
+	input:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	.btn:hover {
+		border: 1px solid #002244;
+	}
+
+	.btn-verify {
+		background-color: #002244;
+		border-radius: 10px;
+		width: 50%;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+}

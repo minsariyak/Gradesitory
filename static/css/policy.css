@@ -1,0 +1,70 @@
+@media only screen and (max-width: 1024px) {
+	.policy h1 {
+		text-align: center;
+		font-size: 80%;
+	}
+
+	.policy h3 {
+		font-size: 70%;
+	}
+
+	.policy {
+		padding: 10%;
+	}
+
+	.policy p {
+		text-align: left;
+		font-size: 80%;
+	}
+
+	.policy a {
+		color: blue;
+	}
+
+	.footer {
+		font-size: 110%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.policy h1 {
+		text-align: center;
+		font-size: 70%;
+	}
+
+	.policy h3 {
+		font-size: 60%;
+	}
+
+	.policy {
+		padding: 5%;
+	}
+
+	.policy p {
+		text-align: left;
+		font-size: 70%;
+	}
+
+	.policy a {
+		color: blue;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	h1 {
+		text-align: center;
+	}
+
+	.policy {
+		padding-left: 25%;
+		padding-right: 25%;
+	}
+
+	p {
+		text-align: justify;
+	}
+
+	a {
+		color: blue;
+	}
+}

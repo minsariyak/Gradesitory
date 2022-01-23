@@ -1,0 +1,177 @@
+@media only screen and (max-width: 1024px) {
+
+	.alert {
+		width: 70%;
+		margin: auto;
+	}
+	
+	.contact {
+		text-align: center;
+	}
+
+	.contact form {
+		margin-bottom: 5%;
+	}
+
+	textarea {
+		resize: none;
+		border: 1px solid #002244;
+		border-radius: 7px;
+		height: 250px;
+		width: 50%;
+		padding: 2%;
+	}
+
+	textarea:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	textarea::placeholder {
+		font-size: 80%;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		border-radius: 7px;
+		border: 1px solid #002244;
+		width: 50%;
+		padding: 2%;
+	}
+
+	input:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+
+	input::placeholder {
+		font-size: 80%;
+	}
+
+	.btn-submit {
+		background-color: #002244;
+		border-radius: 10px;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	
+	.alert {
+		width: 80%;
+		margin: auto;
+	}
+
+	.contact {
+		text-align: center;
+		padding-top: 5%;
+	}
+
+	.contact form {
+		margin-bottom: 5%;
+	}
+
+	textarea {
+		resize: none;
+		border: 1px solid #002244;
+		border-radius: 7px;
+		height: 150px;
+		width: 70%;
+		padding: 3%;
+	}
+
+	textarea:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		border-radius: 7px;
+		border: 1px solid #002244;
+		width: 70%;
+		padding: 3%;
+	}
+
+	input:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	.btn-submit {
+		background-color: #002244;
+		border-radius: 10px;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+
+	.alert {
+		width: max-content;
+		margin: auto;
+	}
+
+	.contact {
+		text-align: center;
+	}
+
+	.contact form {
+		margin-bottom: 5%;
+	}
+
+	textarea {
+		resize: none;
+		border: 1px solid #002244;
+		border-radius: 7px;
+		height: 150px;
+		width: 25%;
+		padding: 1%;
+	}
+
+	textarea:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		border-radius: 7px;
+		border: 1px solid #002244;
+		width: 25%;
+		padding: 1%;
+	}
+
+	input:focus {
+		outline: none;
+		border: 3px solid #002244;
+	}
+
+	.btn-submit {
+		background-color: #002244;
+		border-radius: 10px;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 10px;
+		border: none;
+	}
+}

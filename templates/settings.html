@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gradesitory | Settings</title>
+	<link rel="shortcut icon" type="image/png" href="../static/img/logo.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="../static/css/settings.css">
+	<script src="../static/js/settings.js"></script>
+	<script src="https://kit.fontawesome.com/e7ff852a3e.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-212594011-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-212594011-1');
+	</script>
+</head>
+<body>
+
+	<!--overlay to disable clicks behind pop up elements-->
+	<div id="overlay" onclick="revert()"></div>
+
+	<!--Top Navigation Bar-->
+	<div id="topnav">
+
+		<i class="fas fa-bars" id="bars" onclick="showSidenav()"></i>
+
+		<div class="user">
+			<i class="fas fa-user-graduate"></i> Hello, {{ user[0]['username'] }}
+		</div>
+	</div>
+
+	<!--Side Navigation Bar-->
+	<div id="sidenav">
+		<i class="fas fa-arrow-left" onclick="goHome()" style="cursor: pointer; margin: 0px;"></i>
+		<h3 class="nav-title">Settings</h3>
+  		<a href="#" onclick="showProfile()"><i class="fas fa-user-circle"></i> Profile</a>
+  		<a href="#" onclick="showSubscription()"><i class="fas fa-file-invoice-dollar"></i> Subscription</a>
+  		<div class="bottom"><a href="/logout" style="color: red;"><i class="fas fa-sign-out-alt"></i> Logout</a></div>
+	</div>
+	<div id="sidenav-mobile">
+		<i class="fas fa-times cross-mobile" onclick="hideSidenav()"></i>
+		<h3 class="nav-title">Settings</h3>
+  		<a href="#" onclick="showProfileMb()"><i class="fas fa-user-circle"></i> Profile</a>
+  		<a href="#" onclick="showSubscriptionMb()"><i class="fas fa-file-invoice-dollar"></i> Subscription</a>
+  		<div class="bottom">
+  			<a href="/gpa"><i class="fas fa-home"></i> Home</a>
+  			<a href="/logout" style="color: red;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  		</div>
+	</div>
+
+	<div id="subscription-content">
+
+		<h1 class="title">Subscription Settings</h1>
+
+		<div id="s-main">
+
+			<!--server side data validation for updating payment card-->
+			{% if card_message: %}
+				<div class="message alert alert-success">
+					<p>{{ card_message }}</p>
+				</div>
+			{% endif %}
+			{% if error_msg: %}
+				<div class="message alert alert-danger">
+					<p>{{ error_msg }}</p>
+				</div>
+			{% endif %}
+
+			<!--client side data validation for updating payment card-->
+			<div id="error-display" class="message alert alert-danger" style="display: none;"></div>
+
+			<div class="flex-container">
+				<div class="flex-item-left">
+					<h3>Payment Card</h3>
+					<i class="far fa-credit-card"></i><p style="display: inline;"> xxxx xxxx xxxx {{ current_card['card']['last4'] }}</p>
+					<br>
+					<button class="link" onclick="showUpdateCard()">Change Card</button>
+				</div>
+				<div class="flex-item-right">
+					<h3>Cancel Subscription</h3>
+					<br class="space">
+					<button class="cancel" onclick="makeSure()">Cancel</button>
+				</div>
+			</div>
+
+			<div class="flex-container">
+				<div class="flex-item-left">
+					<h3>Next Billing Date</h3>
+					<p>{{ next_billing_date }}</p>
+				</div>
+				<div class="flex-item-right">
+					<h3>Transaction History</h3>
+					<table class="table">
+						{% for row in history: %}
+							<tr>
+								<td>Paid ${{ row['amount'] }} on {{ row['date'] }}</td>
+							</tr>
+						{% endfor %}
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<!--pop up form to submit new payment card details-->
+		<div id="update-card">
+			<h3>Update Payment Card</h3>
+			<form id="update" name="payment-update" autocomplete="off">
+				<input type="text" name="card_number" placeholder="Card Number" maxlength="16" size="16" required onkeyup="move(this, 'MM')"> <br><br>
+				<input type="text" name="card_exp_month" placeholder="MM" maxlength="2" size="2" required id="MM" onkeyup="move(this, 'YY')">/
+				<input type="text" name="card_exp_year" placeholder="YY" maxlength="2" size="2" required id="YY" onkeyup="move(this, 'CVC')"> <br><br>
+				<input type="text" name="card_cvc" placeholder="CVC" maxlength="3" size="3" required id="CVC"> <br><br>
+				<button class="btn-update-card" onclick="validate()">Update</button>
+			</form>
+		</div>
+
+		<!--pop up form to confirm subscription cancellation-->
+		<form id="cancellation-form">
+			<div style="text-align: left;">
+				<h6 style="color: red; text-align: center;">IMPORTANT!</h6>
+				<li>Your account will be deactivated immediately.</li>
+				<li>Your subscription cycle will be stopped.</li>
+				<li>You won't be able to access this account again.</li>
+				<li>All your courses will be lost.</li>
+				<li>All information regarding this account will be deleted.</li>
+			</div>
+			<div style="margin-top: 20px;">
+				<label>Are you sure you want to cancel your subscription?</label>
+			</div>
+			<button type="button" class="btn-yes" onclick="cancelSubscription()">Yes</button>
+			<button type="button" class="btn-no" onclick="revert()">No</button>
+		</form>
+	</div>
+
+	<div id="profile-content">
+
+		<h1 class="title">Profile Settings</h1>
+
+		<div id="p-main">
+
+			{% if password_message: %}
+				<div class="message alert alert-success">
+					<p>{{ password_message }}</p>
+				</div>
+			{% elif password_error: %}
+				<div class="message alert alert-danger">
+					<p>{{ password_error }}</p>
+				</div>
+			{% endif %}
+
+			{% if email_message: %}
+				<div class="message alert alert-success">
+					<p>{{ email_message }}</p>
+				</div>
+			{% elif email_error: %}
+				<div class="message alert alert-danger">
+					<p>{{ email_error }}</p>
+				</div>
+			{% endif %}
+
+			<div class="flex-container">
+				<div class="flex-item-left">
+					<h3>Username</h3>
+					<p>{{ user[0]['username'] }}</p>
+				</div>
+				<div class="flex-item-right">
+					<h3>GPA Scale</h3>
+					<p>{{ user[0]['gpa_scale'] }}</p>
+				</div>
+			</div>
+
+			<div class="flex-container">
+				<div class="flex-item-left">
+					<h3>Email</h3>
+					<p>{{ user[0]['email'] }}</p>
+					<button class="link" onclick="showEmailChange()">Change Email</button>
+				</div>
+				<div class="flex-item-right">
+					<h3>Password</h3>
+					<p>*******</p>
+					<button class="link" onclick="showPassChange()">Change Password</button>
+				</div>
+			</div>
+		</div>
+
+		<form action="/change_password" method="POST" id="pass-change" autocomplete="off">
+			<h3>Change Password</h3>
+			<label>Current Password</label><br>
+			<input type="password" name="current_password" placeholder="Enter current password" required><br><br>
+			<label>New Password</label> <br>
+			<input type="password" name="new_password" placeholder="Enter new password" required><br><br>
+			<label>Confirm Password</label><br>
+			<input type="password" name="confirm_new_password" placeholder="Confirm password" required><br><br>
+			<button class="btn-change-pass">Change Password</button>
+		</form>
+
+		<form action="/change_email" method="POST" id="email-change" autocomplete="off">
+			<h3>Change Email Address</h3>
+			<label>Current Password</label><br>
+			<input type="password" name="current_password" placeholder="Enter current password" required><br><br>
+			<label>Current Email Address</label><br>
+			<input type="email" name="current_email" placeholder="Enter current email" required><br><br>
+			<label>New Email Address</label><br>
+			<input type="email" name="new_email" placeholder="Enter new email" required><br><br>
+			<button class="btn-change-email">Change Email</button>
+		</form>
+	</div>
+
+	{% if view == "subscription": %}
+		<script type="text/javascript">
+			showSubscription();
+		</script>
+	{% endif %}
+	{% if view == "profile": %}
+		<script type="text/javascript">
+			showProfile();
+		</script>
+	{% endif %}
+</body>
+</html>

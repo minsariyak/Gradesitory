@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gradesitory | Verify Email</title>
+	<link rel="shortcut icon" type="image/png" href="../static/img/logo.png">
+	<link rel="stylesheet" href="../static/css/verify.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-212594011-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-212594011-1');
+	</script>
+</head>
+<body style="background-color: #F0F8FF;">
+
+	<!--Email Verification Div-->
+	<div id="verify-email">
+		{% if msg: %}
+			<div class="alert alert-success">
+				<p>{{ msg }}</p>
+			</div>
+		{% endif %}
+
+		<form action="/verify_email" method="POST">
+			<h1>Verify Email</h1>
+			<p>We sent a verification code to your email address</p>
+			<label>Enter Code Below</label>
+			<br>
+			<input type="text" name="verification_code" placeholder="code" required>
+			<br>
+			<br>
+			<button class="btn-verify">Verify</button>
+		</form>
+
+		<form action="/resend_email_code" method="post">
+			<button class="btn btn-resend" style="margin-top: 10px;">Resend Code</button>
+		</form>
+	</div>
+
+	{% if timeout == True: %}
+		<form id="home" action="/gpa"></form>
+		<script type="text/javascript">
+			setTimeout(function(){document.getElementById("home").submit()}, 3000);
+		</script>
+	{% endif %}
+
+</body>
+</html>

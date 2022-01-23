@@ -1,0 +1,103 @@
+/*CSS for tablets*/
+@media only screen and (max-width: 1024px) {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	.main {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.main h1 {
+		text-align: center;
+	}
+
+	.main .flex-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.scale-4, .scale-9 {
+		width: 100%;
+		margin: auto; 
+		margin-top: 0;
+		padding-top: 0;
+	} 
+
+	table {
+		margin: 0 !important;
+		padding: 0 !important;
+		width: 90% !important;
+		margin: auto;
+		text-align: center;
+	}
+}
+
+/*CSS for mobile phones*/
+@media only screen and (max-width: 480px) {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	.main {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.main h1 {
+		text-align: center;
+	}
+
+	.main .flex-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.scale-4, .scale-9 {
+		width: 100%;
+		margin: auto; 
+		margin-top: 0;
+		padding-top: 0;
+	} 
+
+	table {
+		margin: 0 !important;
+		padding: 0 !important;
+		width: 90% !important;
+		margin: auto;
+		text-align: center;
+	}
+}
+
+/*CSS for laptops/desktops*/
+@media only screen and (min-width: 1025px) {
+	.main {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.main h1 {
+		text-align: center;
+	}
+
+	.main .flex-container {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.scale-4, .scale-9 {
+		width: 50%;
+		margin: auto; 
+		margin-top: 0;
+		padding-top: 0;
+	} 
+
+	table {
+		width: 80% !important;
+		margin: auto;
+		text-align: center;
+	}
+}

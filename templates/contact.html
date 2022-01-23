@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gradesitory | Contact</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="shortcut icon" type="image/png" href="../static/img/logo.png">
+	<link rel="stylesheet" href="../static/css/landing.css">
+	<link rel="stylesheet" href="../static/css/contact.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/e7ff852a3e.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-212594011-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-212594011-1');
+	</script>
+</head>
+<body onload="hideNav()">
+	<div class="navbar">
+		<div class="logo">
+			<a href="/"><img src="../static/img/logo.png"></a>
+		</div>
+		<div class="navlinks">
+			<a href="/grading_systems">Grading Systems</a>
+			<a href="/contact">Contact</a>
+			<a href="/register" class="btn-sign-up">Sign Up</a>
+			<a href="/login" class="btn-sign-in">Sign In</a>
+		</div>
+	</div>
+	<div class="navbar-mb">
+		<div class="icon">
+			<a href="/"><img src="../static/img/logo.png"></a>
+		</div>
+		<div class="bars">
+			<i class="fas fa-bars" onclick="showNav()"></i>
+		</div>
+	</div>
+	<div id="navlinks-mb">
+		<div class="cross">
+			<i class="fas fa-times" onclick="hideNav()"></i>
+		</div>
+		<div class="links">
+			<a href="/grading_systems">Grading Systems</a>
+			<a href="/contact">Contact</a>
+			<div class="bottom">
+				<a href="/register" style="border-radius: 10px; color: #002244 !important; font-weight: bold; border: 2px solid #002244; margin-bottom: 5%; margin-left: 5%; margin-right: 5%;">Sign Up</a>
+				<a href="/login" style="background-color: #002244; border-radius: 10px; color: white !important; font-weight: bold; border: none; margin-bottom: 5%; margin-left: 5%; margin-right: 5%;">Sign In</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="contact">
+		<h1>Reach Out to Us!</h1>
+
+		{% if msg: %}
+			<div class="alert alert-success">
+				<p>{{ msg }}</p>
+			</div>
+		{% endif %}
+
+		<form action="/contact" method="post">
+			<label>Name</label>
+			<br>
+			<input type="text" name="name" placeholder="Your Full Name" required>
+			<br><br>
+			<label>Email</label>
+			<br>
+			<input type="text" name="email" placeholder="Your Email" required>
+			<br><br>
+			<label>How can we help you?</label>
+			<br>
+			<textarea name="message" placeholder="Enter questions, comments, feedback, or anything else you'd like to tell us." required></textarea>
+			<br>
+			<br>
+			<input type="submit" class="btn-submit">
+		</form>
+	</div>
+
+	<div class="footer" style="position: fixed; bottom: 0; width: 100%;">
+		<p><i class="far fa-copyright"></i> 2021 Gradesitory. All rights reserved.<br> <a href="/terms_of_service">Terms of Service</a> | <a href="privacy_policy">Privacy Policy</a></p>
+	</div>
+
+	<script type="text/javascript">
+		function showNav() {
+			document.getElementById("navlinks-mb").style.display = "block";
+		}
+
+		function hideNav() {
+			document.getElementById("navlinks-mb").style.display = "none";
+		}
+	</script>
+</body>
+</html>
