@@ -3,7 +3,9 @@
 ### Overview
 This web application employs a subscription-based model providing users a repository for storing grades and calculating their grade point average (GPA).
 
-Visit [Gradesitory](https://www.gradesitory.com). _(This is the commercial version and you'll have to pay to use it. See below on how to access the unofficial version)_
+Visit [Gradesitory](https://www.gradesitory.com).
+
+**Note:** I decided to publish this project for commercial use and therefore the code isn't accessible to the public. 
 
 **Technologies Employed:** Python, Flask, Stripe API, SQL, SQLite, JavaScript, HTML, CSS, Adobe Photoshop, Adobe Premier Pro, Adobe Illustrator.
 
