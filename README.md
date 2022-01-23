@@ -3,9 +3,7 @@
 ### Overview
 This web application employs a subscription-based model providing users a repository for storing grades and calculating their grade point average (GPA).
 
-Visit [Gradesitory](https://www.gradesitory.com).
-
-**Note:** I decided to publish this project for commercial use and therefore the code isn't accessible to the public. 
+Visit [Gradesitory](https://www.gradesitory.com) _(This is the commercial version. See below to run test version)_
 
 **Technologies Employed:** Python, Flask, Stripe API, SQL, SQLite, JavaScript, HTML, CSS, Adobe Photoshop, Adobe Premier Pro, Adobe Illustrator.
 
@@ -22,3 +20,25 @@ Visit [Gradesitory](https://www.gradesitory.com).
 - Apply concepts of user authentication, sessions and cookies. 
 - Obtain on-the-job exposure to subscription-based business models and payment processing. 
 
+### How to run the application
+1. Download this repository as a zip file and extract the contents (or clone it using git bash console).
+2. Open a command prompt terminal and change directory to the folder extracted in the step above. 
+3. Type the following command:
+
+    > flask run
+4. Copy the link generated and type it into a web browser. The link is displayed at the last line that looks like the following:
+
+    > INFO:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+##### Logging In
+
+1. Use these credentials:
+
+    > Username: JohnD\
+    > Password: 12345
+
+2. Create a new account. Fill out the profile section with any information. For the payment section use the following card details:
+
+    > Card Number: 4242424242424242\
+    > Expiry Date: any future date\
+    > CVC: any 3 numbers
