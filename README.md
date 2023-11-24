@@ -3,8 +3,6 @@
 ### Overview
 This web application employs a subscription-based model providing users a repository for storing grades and calculating their grade point average (GPA).
 
-Visit [Gradesitory](https://www.gradesitory.com) _(This is the commercial version. See below to run test version)_
-
 **Technologies Employed:** Python, Flask, Stripe API, SQL, SQLite, JavaScript, HTML, CSS, Adobe Photoshop, Adobe Premier Pro, Adobe Illustrator.
 
 ### Project Rationale
